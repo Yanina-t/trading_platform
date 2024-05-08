@@ -1,0 +1,74 @@
+[
+    {
+        "model": "network.product",
+        "pk": 3,
+        "fields": {
+            "name": "Планшет",
+            "model": "Модель G",
+            "release_date": "2024-05-25"
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 4,
+        "fields": {
+            "name": "Смарт-часы",
+            "model": "Модель A",
+            "release_date": "2024-06-01"
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 5,
+        "fields": {
+            "name": "Фитнес-браслет",
+            "model": "Модель B",
+            "release_date": "2024-06-10"
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 6,
+        "fields": {
+            "name": "Компьютерная мышь",
+            "model": "Модель C",
+            "release_date": "2024-06-15"
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 7,
+        "fields": {
+            "name": "Клавиатура",
+            "model": "Модель D",
+            "release_date": "2024-06-20"
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 8,
+        "fields": {
+            "name": "Наушники",
+            "model": "Модель E",
+            "release_date": "2024-06-25"
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 9,
+        "fields": {
+            "name": "Монитор",
+            "model": "Модель F",
+            "release_date": "2024-07-01"
+        }
+    },
+    {
+        "model": "network.product",
+        "pk": 10,
+        "fields": {
+            "name": "USB флеш-накопитель",
+            "model": "Модель G",
+            "release_date": "2024-07-10"
+        }
+    }
+]

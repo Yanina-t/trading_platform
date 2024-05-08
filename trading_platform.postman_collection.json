@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "60423836-3439-4d90-ab7e-67f46c8ef6dd",
+		"name": "trading_platform",
+		"description": "StartFragment\n\n### **API торговой платформы**\n\n**Этот репозиторий содержит бэкенд API для торговой платформы, построенной с использованием Django и Django REST Framework. API предоставляет конечные точки для управления поставщиками и продуктами в рамках торговой платформы.**\n\n  \nEndFragment  \n  \nStartFragment\n\n#### **Конечные точки API**\n\n- **/api/suppliers/: Конечная точка для управления поставщиками (GET, POST).**\n    \n- **/api/suppliers//: Конечная точка для получения, обновления или удаления конкретного поставщика (GET, PUT, DELETE).**\n    \n- **/api/products/: Конечная точка для управления продуктами (GET, POST).**\n    \n- **/api/products//: Конечная точка для получения, обновления или удаления конкретного продукта (GET, PUT, DELETE).**\n    \n- **/api/token/: Конечная точка для получения JSON Web Tokens (JWT) для аутентификации.**\n    \n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32891089",
+		"_collection_link": "https://www.postman.com/yaninatv/workspace/trading-platform/collection/32891089-60423836-3439-4d90-ab7e-67f46c8ef6dd?action=share&source=collection_link&creator=32891089"
+	},
+	"item": [
+		{
+			"name": "api/token/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"moderator1\",\r\n    \"password\": \"123654qwe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				},
+				"description": "{\r\n    \"username\": \"username\",\r\n    \"password\": \"password\"\r\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Создание продукта",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Новый продукт\",\r\n  \"model\": \"Модель ABC\",\r\n  \"release_date\": \"2024-05-15\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"create",
+						""
+					]
+				},
+				"description": "{\r\n  \"name\": \"Новый продукт\",\r\n  \"model\": \"Модель ABC\",\r\n  \"release_date\": \"2024-05-15\"\r\n}\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Получить список всех продуктов",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание нового объекта",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"testProduct555\",\r\n    \"email\": \"my444@email.com\",\r\n    \"country\": \"country\",\r\n    \"city\": \"city\",\r\n    \"street\": \"street\",\r\n    \"house_number\": 3,\r\n    \"products\": [4]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/suppliers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"suppliers",
+						""
+					]
+				},
+				"description": "{  \n\"name\": \"testProduct\",  \n\"email\": \"[my@email.com](https://mailto:my@email.com)\",  \n\"country\": \"country\",  \n\"city\": \"city\",  \n\"street\": \"street\",  \n\"house_number\": 3,  \n\"products\": \\[4\\]  \n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Список всех объектов",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/suppliers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"suppliers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение конкретного поставщика",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/suppliers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"suppliers",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "фильтр по стране",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"country\": \"RB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/filter/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filter",
+						""
+					]
+				},
+				"description": "{  \n\"country\": \"country\"  \n}"
+			},
+			"response": []
+		}
+	]
+}
