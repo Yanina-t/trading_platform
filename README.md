@@ -21,9 +21,10 @@
 `python manage.py migrate`
 6. Создайте суперпользователя для доступа к админ-панели Django:  
 `python manage.py createsuperuser`
-7. Загрузите фикстуры в базу данных:  
-`python manage.py loaddata suppliers.json`  
+7. Загрузите фикстуры в базу данных (первый файл products.json т.к. продукты будут привязаны к поставщикам) :  
 `python manage.py loaddata products.json`
+`python manage.py loaddata suppliers.json`  
+
 ### Запуск API
 1. Запустите сервер разработки:  
 `python manage.py runserver`
